@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class MoonWeight {
     //Function calculates a person effective weight on the moon
     public static void main(String[] args){
-        //Variable Defintion
+        //Variable Definition
         float e_gravity = 9.8F;
         float m_gravity = 9.8f*0.17f;
 
@@ -27,3 +27,4 @@ public class MoonWeight {
 
     }
 }
+
