@@ -37,8 +37,7 @@ public class numberGuess_v1 {
             }
         } while (userGuess != num);
 
-        // Here is to print your name
-        System.out.println("Author: Faith Igomodu");
     }
+
 
 }
