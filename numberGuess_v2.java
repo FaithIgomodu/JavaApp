@@ -58,9 +58,9 @@ public class numberGuess_v2 {
             } while (userGuess != ranGuess) ;
 
             System.out.println("You Guessed" +" "+ counter+ " "+ "Times");
-            // Here is to print your name
-            System.out.println("Author: Faith Igomodu");
+
         }
     }
+
 
 
