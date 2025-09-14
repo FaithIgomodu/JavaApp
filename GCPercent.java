@@ -36,7 +36,7 @@ class DNA {
         for(int i =0; i< seq.length(); i++){
             //Convert each base to upper case for case insensativity 
             char bType = Character.toUpperCase(seq.charAt(i));
-            //Counting matches to the bases 
+            //Compare current base in DNA sequence matches base to be counted 
             if(bType == Character.toUpperCase(base)){
                 //Increase count for every match 
                 bCount++;
