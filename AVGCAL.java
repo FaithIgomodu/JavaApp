@@ -65,7 +65,7 @@ public class AVGCAL {
             System.out.println("You FAILED! ");
         }
 
-
+        System.out.println("Author: Faith Igomodu");
     }
 
 }

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ba8d9f16-2fb9-440b-acfa-dde7530195c2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_biotechnology.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_biotechnology/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_biotechnology/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_biotechnology/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_biotechnology/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_biotechnology/Example1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_biotechnology/Example2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_biotechnology/GalToLit.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_biotechnology/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_biotechnology/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_biotechnology/MoonWeight.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_biotechnology/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_biotechnology/Vehicle.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_biotechnology/VehicleM.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_biotechnology/hwk1_2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_biotechnology/hwk1_3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_biotechnology/hwk1_4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_biotechnology/java_biotechnology.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_biotechnology/myName.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_biotechnology/numberGuess_v1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/java_biotechnology/numberGuess_v2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/seq.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/AVGCAL.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="32oI3fQ8VfLlJbOSkDwHssWOHcM" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.AVGCAL.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/doe_z/BIFS618/in_class_exercise/java_biotechnology&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Application.AVGCAL">
+    <configuration name="AVGCAL" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="AVGCAL" />
+      <module name="java_biotechnology" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="java_biotechnology" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.AVGCAL" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ba8d9f16-2fb9-440b-acfa-dde7530195c2" name="Changes" comment="" />
+      <created>1758080300472</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1758080300472</updated>
+    </task>
+    <servers />
+  </component>
+</project>
