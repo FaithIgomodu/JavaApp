@@ -1,16 +1,11 @@
-/* Week2 in-class exercise
+/* Week5 in-class exercise
    Name: Average_2.java
    Author: Faith Igomodu
    Date: 9/16/2025
 
 */
 
-/* Week2 in-class exercise
-   Name: Average_2.java
-   Author: Faith Igomodu
-   Date: 9/16/2025
 
-*/
 
 import java.util.Scanner;
 
@@ -69,4 +64,5 @@ public class AVGCAL {
     }
 
 }
+
 
