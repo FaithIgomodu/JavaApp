@@ -8,15 +8,17 @@
 import java.util.Scanner;
 
 public class Main {
-
     //Method calculates and returns the average grade
     public static double AVGCAL(double... grade) {
-
+            //Variable declartion and instantiation
+        //sum of grades
         double total = 0;
+        //average grade
         double avg_grade = 0;
+        //counts number of each grade
         double count = 0;
 
-
+        //Calcuates sum of grades and counts each grade
         for (double val : grade) {
             total += val;
             count++;
