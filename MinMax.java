@@ -1,4 +1,8 @@
-
+/*
+Class Name: Study
+File name:MinMax
+Program author name: Faith Igomodu
+*/
 
 
 
