@@ -24,7 +24,7 @@ public class BubbleSort {
             System.out.println("" +num[i]);
 
         //Bubble sort algorithm
-        //c=outer loop controls number of iterations through loop
+        //outer loop controls number of iterations through loop
         for(a = 1; a < size ; a++)
             //inner loop compares and swaps
             for(b = size-1; b>= a; b--){
