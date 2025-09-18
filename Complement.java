@@ -5,19 +5,6 @@ File name: Complement
 Program author name: Faith Igomodu
 */
 
-
-//Import Hasmap and Map for DNA complement table. Scanner object for user input. 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
-
-Class Name: Java Biotechnology
-Homework assignment#2, question# 3
-File name: Complement
-Program author name: Faith Igomodu
-*/
-
-
 //Import Hasmap and Map for DNA complement table. Scanner object for user input. 
 import java.util.HashMap;
 import java.util.Map;
@@ -59,14 +46,10 @@ public class Complement {
         }
         //complementary strand
          String complementary = compStrand.toString();
-        //Determine reverse complement
-        reversedComp = compStrand.reverse().toString();
 
         //Display original  DNA sequence and its complement strand 
         System.out.println( " \n"+ "The DNA sequence is and Its Complement:"+
                 " \n"+ userInput + "\n" + complementary);
-        //Display reverse complement
-        System.out.println("Reverse Complement is:" + " "+ reversedComp);
 
 
 
