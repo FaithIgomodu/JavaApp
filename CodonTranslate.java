@@ -1,6 +1,6 @@
 /*
 Class Name: Java for Biotechnology
-Homework assignment3, question1
+Homework assignment3, question 1 and 2
 File name: CodonTranslate.java
 Program author name: Faith Igomodu
 */
@@ -107,8 +107,9 @@ public static List <String> codon2aa  (String seq) {
             for (String c : codonTable) {
                 //Check if the entry in the table starts with a codon and :
                 if (c.startsWith(threebases + ":")) {
-                    //If match is found, split entry by colon and extract the second part 
+                    //If match is found, split entry by colon and extract the second part
                     aMino = c.split(":")[1];
+                    //Once a match is found, exit the loop
                     break;
                 }
             }
