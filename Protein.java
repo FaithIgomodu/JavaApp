@@ -1,52 +1,28 @@
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
 
 import java.util.regex.Pattern;
 
+/* Implement inheritance by using extends keyword to
+ create a protein object with  same properties as
+Sequence superclass.*/
 class Protein extends Sequence{
-    private String proteinSeq;
 
-    //Use parent constructor
+
+    //Use super keyword to obtain the properties of the superclass
     public Protein ( String id,
                     String type,
                     String seq){
         super(type, id, seq );
-        this.proteinSeq = seq;
 
     }
 
-    public Protein() {
 
-    }
 
-    //Get sequence
-    public String getSeq(){
-        return this.proteinSeq;
-    }
-
-    //Set sequence
-    public void setSeq(String seq){
-        this.proteinSeq = seq;
-    }
-
+    // Implement polymorphism by overriding method
     @Override
     public boolean validSeq(){
-        return Pattern.matches("[ACDEFGHIKLMNPQRSTVWY]+", proteinSeq);
+        String sequence = getSeq();
+        return Pattern.matches("[ACDEFGHIKLMNPQRSTVWY]+", sequence);
     }
 
-
-    @Test
-    @DisplayName("Protein Sequence Validation Test")
-    public void testValidSeq() {
-
-        Protein protein = new Protein();
-
-        String proteinValid = "MFASCHCVPRGRRTMKMIHFRSSSVKSLSQEMRCTIRLLDDSEISCHIQRETKGQFLIDHCNYYSLLEKDYFGIRYVDPEKQR";
-        protein.setSeq(proteinValid);
-        boolean isValid = protein.validSeq();
-
-        Assertions.assertTrue(isValid, "If protein sequence is valid, it will pass ");
-    }
 
 }
