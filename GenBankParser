@@ -1,0 +1,85 @@
+//Author: Faith Igomodu 
+
+import java.io.*;
+
+import org.biojava.nbio.core.sequence.DNASequence;
+import org.biojava.nbio.core.sequence.compound.AmbiguityDNACompoundSet;
+import org.biojava.nbio.core.sequence.compound.AmbiguityRNACompoundSet;
+import org.biojava.nbio.core.sequence.compound.NucleotideCompound;
+import org.biojava.nbio.core.sequence.io.*;
+import org.biojava.nbio.core.sequence.template.CompoundSet;
+import java.util.Map;
+
+
+public class GenBankParser {
+
+    public static void main(String[] args) throws Exception {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        // Prompt user for the full file path
+        System.out.print("Enter the full path of the GenBank file: ");
+        String fullPath = br.readLine();
+
+        File genFile = new File(fullPath);
+
+        try (InputStream inputStream = new FileInputStream(genFile)) {
+            // Display file information
+            System.out.println("File Name: " + genFile.getName());
+
+            // Ensure file exists and is a file
+            if (genFile.exists()) {
+                //For ambigous sequences
+                AmbiguityDNACompoundSet ambiguityDNACompoundSet = AmbiguityDNACompoundSet.getDNACompoundSet();
+                CompoundSet<NucleotideCompound> nucleotideCompoundSet = AmbiguityRNACompoundSet.getRNACompoundSet();
+                //GenbankReader parsers GenBank file
+                GenbankReader<DNASequence, NucleotideCompound> proxy =
+                        new GenbankReader<>(
+                                inputStream,
+                                new GenericGenbankHeaderParser<DNASequence, NucleotideCompound>(),
+                                new DNASequenceCreator(ambiguityDNACompoundSet));
+
+                Map<String, DNASequence> genSequence = proxy.process();
+                //Display the length of the sequence
+                if (!genSequence.isEmpty()) {
+                    System.out.println("\n--- Found " + genSequence.size() + " Sequences ---");
+
+                    // Iterate over map
+                    int count = 1;
+                    for (Map.Entry<String, DNASequence> entry : genSequence.entrySet()) {
+                        DNASequence dnaSeq = entry.getValue();
+                        //Display accession ID
+                        System.out.println("Sequence #" + count + " (Header ID: " + entry.getKey() + ")");
+                        // The GenBank header is mapped to the 'description' in BioJava
+                        System.out.println("GenBank Header: " + dnaSeq.getDescription());
+                        // Display the sequence length
+                        System.out.println("Sequence Length: " + dnaSeq.getLength());
+                        // Display the sequence (
+                        System.out.println("Sequence: " +
+                                dnaSeq.getSequenceAsString() +"\n");
+                        count++;
+                   }
+
+                } else {
+                    System.out.println("FASTA file is empty. Try again.");
+                }
+
+            } else {
+                System.out.println("File does not exist. Try again.");
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
