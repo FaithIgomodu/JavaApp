@@ -1,7 +1,10 @@
-//Author: Faith Igomodu 
+/*
+Author: Faith Igomodu 
+Date: 10/22/2025
+Description: GenBank File Parser Developed With BioJava 7.2.2
+*/
 
 import java.io.*;
-
 import org.biojava.nbio.core.sequence.DNASequence;
 import org.biojava.nbio.core.sequence.compound.AmbiguityDNACompoundSet;
 import org.biojava.nbio.core.sequence.compound.AmbiguityRNACompoundSet;
@@ -11,72 +14,69 @@ import org.biojava.nbio.core.sequence.template.CompoundSet;
 import java.util.Map;
 
 
-public class GenBankParser {
+public class hwk5_1 {
 
     public static void main(String[] args) throws Exception {
 
+        //BufferedReader object to read input from console
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        // Prompt user for the full file path
+        // Prompt user for full file path of GenBank file
         System.out.print("Enter the full path of the GenBank file: ");
         String fullPath = br.readLine();
-
+        //File object of GenBank file
         File genFile = new File(fullPath);
-
+        //Try-catch statement to ensure InputStream is closed automatically
         try (InputStream inputStream = new FileInputStream(genFile)) {
-            // Display file information
+            // Display the name of the file
             System.out.println("File Name: " + genFile.getName());
 
-            // Ensure file exists and is a file
+            // Check if file exists
             if (genFile.exists()) {
-                //For ambigous sequences
+                //Create sets for ambigugous DNA and RNA sequences
                 AmbiguityDNACompoundSet ambiguityDNACompoundSet = AmbiguityDNACompoundSet.getDNACompoundSet();
                 CompoundSet<NucleotideCompound> nucleotideCompoundSet = AmbiguityRNACompoundSet.getRNACompoundSet();
-                //GenbankReader parsers GenBank file
+                //GenbankReader object to parse GenBank file
                 GenbankReader<DNASequence, NucleotideCompound> proxy =
                         new GenbankReader<>(
                                 inputStream,
                                 new GenericGenbankHeaderParser<DNASequence, NucleotideCompound>(),
                                 new DNASequenceCreator(ambiguityDNACompoundSet));
-
+                //Process the GenBank file and retrieve sequences
                 Map<String, DNASequence> genSequence = proxy.process();
-                //Display the length of the sequence
+                //Display Number of sequences found
                 if (!genSequence.isEmpty()) {
                     System.out.println("\n--- Found " + genSequence.size() + " Sequences ---");
-
-                    // Iterate over map
+                    //Iterate over the map of sequences
                     int count = 1;
                     for (Map.Entry<String, DNASequence> entry : genSequence.entrySet()) {
                         DNASequence dnaSeq = entry.getValue();
                         //Display accession ID
-                        System.out.println("Sequence #" + count + " (Header ID: " + entry.getKey() + ")");
-                        // The GenBank header is mapped to the 'description' in BioJava
-                        System.out.println("GenBank Header: " + dnaSeq.getDescription());
+                        System.out.println("Sequence #" + count + " (Accession ID: " + entry.getKey() + ")");
+                        // Display GenBank Description / Definition
+                        System.out.println("GenBank Description: " + dnaSeq.getDescription());
                         // Display the sequence length
                         System.out.println("Sequence Length: " + dnaSeq.getLength());
-                        // Display the sequence (
+                        // Display the sequence
                         System.out.println("Sequence: " +
                                 dnaSeq.getSequenceAsString() +"\n");
                         count++;
                    }
 
                 } else {
+                    //Message if the  GenBank file is empty
                     System.out.println("GenBank file is empty. Try again.");
                 }
 
             } else {
+                //Message if the file does not exist
                 System.out.println("File does not exist. Try again.");
             }
 
         } catch (Exception e) {
+            //Handle exceptions
             e.printStackTrace();
         }
     }
-
-}
-
-
-
-
 
 
 
