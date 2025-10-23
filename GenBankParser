@@ -60,7 +60,7 @@ public class GenBankParser {
                    }
 
                 } else {
-                    System.out.println("FASTA file is empty. Try again.");
+                    System.out.println("GenBank file is empty. Try again.");
                 }
 
             } else {
