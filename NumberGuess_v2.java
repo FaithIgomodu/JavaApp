@@ -11,7 +11,7 @@
 import java.util.Scanner;
 import java.util.Random;
 
-public class numberGuess_v2 {
+public class NumberGuess_v2 {
 
     /**
      * @param args none
@@ -61,6 +61,7 @@ public class numberGuess_v2 {
 
         }
     }
+
 
 
 
