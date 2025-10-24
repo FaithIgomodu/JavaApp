@@ -5,7 +5,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Scanner;
 
-public class FastaReader {
+public class CountFastaFiles {
     public static void main(String[] args){
         String line ;
         int count =0;
