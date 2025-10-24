@@ -14,7 +14,7 @@ import org.biojava.nbio.core.sequence.template.CompoundSet;
 import java.util.Map;
 
 
-public class hwk5_1 {
+public class GenBankParser {
 
     public static void main(String[] args) throws Exception {
 
