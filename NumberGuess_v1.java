@@ -11,7 +11,7 @@
 
 import java.util.Scanner;
 
-public class numberGuess_v1 {
+public class NumberGuess_v1 {
 
     /**
      * @param args none
@@ -41,3 +41,4 @@ public class numberGuess_v1 {
 
 
 }
+
