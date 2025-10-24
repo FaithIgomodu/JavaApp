@@ -17,7 +17,7 @@ import java.util.Arrays;
 import java.util.List;
 
 
-public class CodonTranslate {
+public class Translation {
 
 public static List <String> codon (String seq) {
     /*
